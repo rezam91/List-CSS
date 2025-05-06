@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: gray;
+    font-size: 40px;
+}
+.container {
+    position: relative;
+    width: fit-content;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+.list {
+    border: 1px solid black;
+    background-color: white;
+    height: fit-content;
+}
+label {
+    cursor: pointer;
+    display: flex;
+    gap: 150px;
+}
+ul {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow:hidden;
+    margin-top: 0;
+    background-color: white;
+    list-style: none;
+    padding-left: 0;
+    transition: all 0.5s ease-in-out;
+}
+input:checked ~ ul {
+    height: 200px;
+    overflow-y: scroll;
+}
+input {
+    display: none;
+}
+ul li label:hover {
+    background-color: rgb(42, 141, 42);
+}
+
+
