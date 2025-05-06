@@ -7,7 +7,7 @@ body {
 }
 .container {
     position: relative;
-    width: fit-content;
+    width: 600px;
     margin-top: 50px;
     margin-left: 50px;
 
@@ -20,7 +20,8 @@ body {
 label {
     cursor: pointer;
     display: flex;
-    gap: 150px;
+    justify-content: space-between;
+    /* gap: 150px; */
 }
 ul {
     position: absolute;
@@ -33,10 +34,13 @@ ul {
     padding-left: 0;
     transition: all 0.5s ease-in-out;
 }
-input:checked ~ ul {
+input[id="city"]:checked ~ ul {
     height: 200px;
     overflow-y: scroll;
 }
+/* .container ul input {
+    display: none;
+} */
 input {
     display: none;
 }
@@ -44,4 +48,49 @@ ul li label:hover {
     background-color: rgb(42, 141, 42);
 }
 
+/* .container label div:after {
+    content: '';
+}
+.container:has(input[id="tehran"]:checked) label div:after {
+    content: ' Tehran';
+}
+.container:has(input[id="tehran"]:checked) ul {
+    height: 0;
+}
+.container:has(input[id="kish"]:checked) label div:after {
+    content: ' Kish';
+}
+.container:has(input[id="kish"]:checked) ul {
+    height: 0;
+}
+.container:has(input[id="esfehan"]:checked) label div:after {
+    content: ' Esfehan';
+}
+.container:has(input[id="esfehan"]:checked) ul {
+    height: 0;
+}
+.container:has(input[id="mashhad"]:checked) label div:after {
+    content: ' Mashhad';
+}
+.container:has(input[id="mashhad"]:checked) ul {
+    height: 0;
+}
+.container:has(input[id="tabriz"]:checked) label div:after {
+    content: ' Tabriz';
+}
+.container:has(input[id="tabriz"]:checked) ul {
+    height: 0;
+}
+.container:has(input[id="kerman"]:checked) label div:after {
+    content: ' Kerman';
+}
+.container:has(input[id="kerman"]:checked) ul {
+    height: 0;
+}
+.container:has(input[id="qeshm"]:checked) label div:after {
+    content: ' Qeshm';
+}
+.container:has(input[id="qeshm"]:checked) ul {
+    height: 0;
+} */
 
